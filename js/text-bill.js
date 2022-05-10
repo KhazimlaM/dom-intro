@@ -29,10 +29,10 @@ function textBillTotal() {
     
     // complete if statement for red and orange color change
 
-    if(totalCost >= 49){
+    if(totalCost >= 50){
         totalOne.classList.add("danger");
      }
-   else if(totalCost >= 29){
+   else if(totalCost >= 30){
         totalOne.classList.add("warning");
      }
 
