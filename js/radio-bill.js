@@ -32,19 +32,20 @@ function textBillTotal() {
         }
 
         // complete if statement for red and orange color change
-
-        if (totalCost1 >= 50){
-            totalTwo1.classList.add("danger");
-        }
-        else if (totalCost1 >= 30) {
-            totalTwo1.classList.add("warning");
-        }
-
-        //update the totals that is displayed on the screen.
         callTotalTwo1.innerHTML = callsTotal1.toFixed(2);
         smsTotalTwo1.innerHTML = smsTotal1.toFixed(2);
         totalCost1 = callsTotal1 + smsTotal1;
         totalTwo1.innerHTML = totalCost1.toFixed(2);
+
+        if (totalCost1 >= 50){
+            totalTwo1.classList.add("danger");
+        }
+        else if (totalCost1 >= 30){
+            totalTwo1.classList.add("warning");
+        }
+
+        //update the totals that is displayed on the screen.
+       
     }
 }
 radioBillAddBtn1.addEventListener('click', textBillTotal);

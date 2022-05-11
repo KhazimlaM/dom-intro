@@ -28,6 +28,10 @@ function textBillTotal() {
     }
     
     // complete if statement for red and orange color change
+    callTotalOne.innerHTML = callsTotal.toFixed(2);
+    smsTotalOne.innerHTML = smsTotal.toFixed(2);
+    totalCost = callsTotal + smsTotal;
+    totalOne.innerHTML = totalCost.toFixed(2);
 
     if(totalCost >= 50){
         totalOne.classList.add("danger");
@@ -37,10 +41,7 @@ function textBillTotal() {
      }
 
     //update the totals that is displayed on the screen
-    callTotalOne.innerHTML = callsTotal.toFixed(2);
-    smsTotalOne.innerHTML = smsTotal.toFixed(2);
-    totalCost = callsTotal + smsTotal;
-    totalOne.innerHTML = totalCost.toFixed(2);
+    
 }
 
 addToBillBtn.addEventListener('click', textBillTotal);

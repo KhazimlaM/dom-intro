@@ -40,16 +40,18 @@ function calculateBtnClicked(){
     billTotalElement.innerHTML = roundedBillTotal;
 
     // complete if statement for red and orange color change
-    if(roundedBillTotal < 20){
+    if(roundedBillTotal < 30 && roundedBillTotal < 20){
       billTotalElement.classList.remove("danger");
       billTotalElement.classList.remove("warning");
     }
 
     if(roundedBillTotal >= 30){
       billTotalElement.classList.add("danger");
+      billTotalElement.classList.remove("warning");
     }
     else if(roundedBillTotal >= 20){
       billTotalElement.classList.add("warning");
+      billTotalElement.classList.remove("danger");
     } 
   }
 
