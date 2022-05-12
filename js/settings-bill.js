@@ -80,10 +80,12 @@ function textBillTotal() {
    
     if (totalCost2 >= criticalLevel) {
         totalSettings.classList.add("danger");
+        totalSettings.classList.remove("warning");
     }
    
   else if (totalCost2 >= warningLevel) {
         totalSettings.classList.add("warning");
+        totalSettings.classList.remove("danger");
     }
  }
 
