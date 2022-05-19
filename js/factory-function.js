@@ -66,13 +66,13 @@ function billWIthSettings(){
     }
 
     function hasReachedCriticalLevel(){
-        return getTotalCallCost() >= getCriticalLevel();
+        return getTotalCost() >= getCriticalLevel();
     }
 
     function totalClassName(){
 
         if(hasReachedCriticalLevel()){
-            return "critical";
+            return "danger";
         }
         
         if(getTotalCost() >= getWarningLevel()){

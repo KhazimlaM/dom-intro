@@ -39,8 +39,8 @@ updateSettingsElement.addEventListener('click', () => {
 
     settingBill.setCallCost(Number(cSetting.value));
     settingBill.setSmsCost(Number(smsSetting.value));
-    settingBill.setWarningLevel(Number(wLevel.value));
     settingBill.setCriticalLevel(Number(cLevel.value));
+    settingBill.setWarningLevel(Number(wLevel.value));
 
     warningCriticalLevel();
  
@@ -71,8 +71,8 @@ function textBillTotal() {
 
  function warningCriticalLevel(){
 
-    totalSettings.classList.remove("warning");
-    totalSettings.classList.remove("critical");
+     totalSettings.classList.remove("warning");
+     totalSettings.classList.remove("danger");
     totalSettings.classList.add(settingBill.totalClassName());
 
  }
